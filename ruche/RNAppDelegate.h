@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RNHomeViewController.h"
 
 @interface RNAppDelegate : UIResponder <UIApplicationDelegate>
 
