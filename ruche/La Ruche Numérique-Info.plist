@@ -28,6 +28,8 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>1484839208403900</string>
+		<string>La ruche numerique iOS</string>
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarTintParameters</key>

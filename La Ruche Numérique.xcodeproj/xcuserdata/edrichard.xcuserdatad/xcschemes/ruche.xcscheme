@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81DA57AC18CE4E4600A644EE"
-               BuildableName = "ruche.app"
+               BuildableName = "La Ruche Nume&#x301;rique.app"
                BlueprintName = "La Ruche Nume&#x301;rique"
                ReferencedContainer = "container:La Ruche Nume&#x301;rique.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81DA57D018CE4E4700A644EE"
-               BuildableName = "rucheTests.xctest"
+               BuildableName = "La Ruche Nume&#x301;riqueTests.xctest"
                BlueprintName = "La Ruche Nume&#x301;riqueTests"
                ReferencedContainer = "container:La Ruche Nume&#x301;rique.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81DA57AC18CE4E4600A644EE"
-            BuildableName = "ruche.app"
+            BuildableName = "La Ruche Nume&#x301;rique.app"
             BlueprintName = "La Ruche Nume&#x301;rique"
             ReferencedContainer = "container:La Ruche Nume&#x301;rique.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81DA57AC18CE4E4600A644EE"
-            BuildableName = "ruche.app"
+            BuildableName = "La Ruche Nume&#x301;rique.app"
             BlueprintName = "La Ruche Nume&#x301;rique"
             ReferencedContainer = "container:La Ruche Nume&#x301;rique.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81DA57AC18CE4E4600A644EE"
-            BuildableName = "ruche.app"
+            BuildableName = "La Ruche Nume&#x301;rique.app"
             BlueprintName = "La Ruche Nume&#x301;rique"
             ReferencedContainer = "container:La Ruche Nume&#x301;rique.xcodeproj">
          </BuildableReference>
