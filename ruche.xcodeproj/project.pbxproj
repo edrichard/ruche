@@ -77,6 +77,7 @@
 		81DA57DF18CE4E4700A644EE /* rucheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DA57DE18CE4E4700A644EE /* rucheTests.m */; };
 		81DA57F318CE677000A644EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57F218CE677000A644EE /* MapKit.framework */; };
 		81DA57F518CE7FD900A644EE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57F418CE7FD900A644EE /* CoreLocation.framework */; };
+		81F748C018FBDDA7002C1963 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F748BF18FBDDA7002C1963 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 		81DA57DE18CE4E4700A644EE /* rucheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rucheTests.m; sourceTree = "<group>"; };
 		81DA57F218CE677000A644EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		81DA57F418CE7FD900A644EE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		81F748BF18FBDDA7002C1963 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F748C018FBDDA7002C1963 /* SystemConfiguration.framework in Frameworks */,
 				81380FD518F88224008B20B9 /* FacebookSDK.framework in Frameworks */,
 				8104922518DCA3A600227A63 /* Twitter.framework in Frameworks */,
 				8104922318DC59EB00227A63 /* Accounts.framework in Frameworks */,
@@ -554,6 +557,7 @@
 		81DA57AF18CE4E4600A644EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81F748BF18FBDDA7002C1963 /* SystemConfiguration.framework */,
 				8104922418DCA3A600227A63 /* Twitter.framework */,
 				8104922218DC59EB00227A63 /* Accounts.framework */,
 				8104902818D98C2500227A63 /* MessageUI.framework */,
