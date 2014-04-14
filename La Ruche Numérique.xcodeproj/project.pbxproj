@@ -78,6 +78,8 @@
 		81DA57F318CE677000A644EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57F218CE677000A644EE /* MapKit.framework */; };
 		81DA57F518CE7FD900A644EE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57F418CE7FD900A644EE /* CoreLocation.framework */; };
 		81F748C018FBDDA7002C1963 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F748BF18FBDDA7002C1963 /* SystemConfiguration.framework */; };
+		81F748C718FC0CF7002C1963 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F748C618FC0CF7002C1963 /* QuartzCore.framework */; };
+		81F748CA18FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F748C918FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,16 +194,16 @@
 		817C779F18D4765500FAC7ED /* RNEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNEventCell.h; path = /Users/edrichard/IIA/iOS/ruche/ruche/Events/RNEventCell.h; sourceTree = "<absolute>"; };
 		817C77A018D4765500FAC7ED /* RNEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNEventCell.m; path = /Users/edrichard/IIA/iOS/ruche/ruche/Events/RNEventCell.m; sourceTree = "<absolute>"; };
 		817C77A218D4767500FAC7ED /* RNEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNEventCell.xib; path = /Users/edrichard/IIA/iOS/ruche/ruche/Events/RNEventCell.xib; sourceTree = "<absolute>"; };
-		81DA57AD18CE4E4600A644EE /* ruche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ruche.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA57AD18CE4E4600A644EE /* La Ruche Numérique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "La Ruche Numérique.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DA57B018CE4E4600A644EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81DA57B218CE4E4600A644EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		81DA57B418CE4E4600A644EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		81DA57B818CE4E4600A644EE /* ruche-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ruche-Info.plist"; sourceTree = "<group>"; };
+		81DA57B818CE4E4600A644EE /* La Ruche Numérique-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "La Ruche Numérique-Info.plist"; sourceTree = "<group>"; };
 		81DA57BA18CE4E4600A644EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81DA57BC18CE4E4600A644EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		81DA57BE18CE4E4600A644EE /* ruche-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ruche-Prefix.pch"; sourceTree = "<group>"; };
+		81DA57BE18CE4E4600A644EE /* La Ruche Numérique-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "La Ruche Numérique-Prefix.pch"; sourceTree = "<group>"; };
 		81DA57CB18CE4E4700A644EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		81DA57D118CE4E4700A644EE /* rucheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rucheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA57D118CE4E4700A644EE /* La Ruche NumériqueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "La Ruche NumériqueTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DA57D218CE4E4700A644EE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		81DA57DA18CE4E4700A644EE /* rucheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rucheTests-Info.plist"; sourceTree = "<group>"; };
 		81DA57DC18CE4E4700A644EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -209,6 +211,9 @@
 		81DA57F218CE677000A644EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		81DA57F418CE7FD900A644EE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		81F748BF18FBDDA7002C1963 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		81F748C618FC0CF7002C1963 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		81F748C818FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SpiralPullToRefresh.h"; sourceTree = "<group>"; };
+		81F748C918FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SpiralPullToRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F748C718FC0CF7002C1963 /* QuartzCore.framework in Frameworks */,
 				81F748C018FBDDA7002C1963 /* SystemConfiguration.framework in Frameworks */,
 				81380FD518F88224008B20B9 /* FacebookSDK.framework in Frameworks */,
 				8104922518DCA3A600227A63 /* Twitter.framework in Frameworks */,
@@ -246,6 +252,8 @@
 		8104901E18D8E48800227A63 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				81F748C818FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.h */,
+				81F748C918FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.m */,
 				8138105718F89083008B20B9 /* Reachability.h */,
 				8138105818F89083008B20B9 /* Reachability.m */,
 				8145C48A18F8765C00CA1091 /* UILabel+Boldify.h */,
@@ -548,8 +556,8 @@
 		81DA57AE18CE4E4600A644EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81DA57AD18CE4E4600A644EE /* ruche.app */,
-				81DA57D118CE4E4700A644EE /* rucheTests.xctest */,
+				81DA57AD18CE4E4600A644EE /* La Ruche Numérique.app */,
+				81DA57D118CE4E4700A644EE /* La Ruche NumériqueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -557,6 +565,7 @@
 		81DA57AF18CE4E4600A644EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81F748C618FC0CF7002C1963 /* QuartzCore.framework */,
 				81F748BF18FBDDA7002C1963 /* SystemConfiguration.framework */,
 				8104922418DCA3A600227A63 /* Twitter.framework */,
 				8104922218DC59EB00227A63 /* Accounts.framework */,
@@ -597,10 +606,10 @@
 		81DA57B718CE4E4600A644EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				81DA57B818CE4E4600A644EE /* ruche-Info.plist */,
+				81DA57B818CE4E4600A644EE /* La Ruche Numérique-Info.plist */,
 				81DA57B918CE4E4600A644EE /* InfoPlist.strings */,
 				81DA57BC18CE4E4600A644EE /* main.m */,
-				81DA57BE18CE4E4600A644EE /* ruche-Prefix.pch */,
+				81DA57BE18CE4E4600A644EE /* La Ruche Numérique-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -669,9 +678,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81DA57AC18CE4E4600A644EE /* ruche */ = {
+		81DA57AC18CE4E4600A644EE /* La Ruche Numérique */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81DA57E218CE4E4700A644EE /* Build configuration list for PBXNativeTarget "ruche" */;
+			buildConfigurationList = 81DA57E218CE4E4700A644EE /* Build configuration list for PBXNativeTarget "La Ruche Numérique" */;
 			buildPhases = (
 				81DA57A918CE4E4600A644EE /* Sources */,
 				81DA57AA18CE4E4600A644EE /* Frameworks */,
@@ -681,14 +690,14 @@
 			);
 			dependencies = (
 			);
-			name = ruche;
+			name = "La Ruche Numérique";
 			productName = ruche;
-			productReference = 81DA57AD18CE4E4600A644EE /* ruche.app */;
+			productReference = 81DA57AD18CE4E4600A644EE /* La Ruche Numérique.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81DA57D018CE4E4700A644EE /* rucheTests */ = {
+		81DA57D018CE4E4700A644EE /* La Ruche NumériqueTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81DA57E518CE4E4700A644EE /* Build configuration list for PBXNativeTarget "rucheTests" */;
+			buildConfigurationList = 81DA57E518CE4E4700A644EE /* Build configuration list for PBXNativeTarget "La Ruche NumériqueTests" */;
 			buildPhases = (
 				81DA57CD18CE4E4700A644EE /* Sources */,
 				81DA57CE18CE4E4700A644EE /* Frameworks */,
@@ -699,9 +708,9 @@
 			dependencies = (
 				81DA57D718CE4E4700A644EE /* PBXTargetDependency */,
 			);
-			name = rucheTests;
+			name = "La Ruche NumériqueTests";
 			productName = rucheTests;
-			productReference = 81DA57D118CE4E4700A644EE /* rucheTests.xctest */;
+			productReference = 81DA57D118CE4E4700A644EE /* La Ruche NumériqueTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -719,7 +728,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81DA57A818CE4E4600A644EE /* Build configuration list for PBXProject "ruche" */;
+			buildConfigurationList = 81DA57A818CE4E4600A644EE /* Build configuration list for PBXProject "La Ruche Numérique" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -771,8 +780,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				81DA57AC18CE4E4600A644EE /* ruche */,
-				81DA57D018CE4E4700A644EE /* rucheTests */,
+				81DA57AC18CE4E4600A644EE /* La Ruche Numérique */,
+				81DA57D018CE4E4700A644EE /* La Ruche NumériqueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -850,6 +859,7 @@
 				8138105918F89083008B20B9 /* Reachability.m in Sources */,
 				8138104318F88E22008B20B9 /* RNTeamViewController.m in Sources */,
 				8138103218F88D08008B20B9 /* RNDisplayMap.m in Sources */,
+				81F748CA18FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.m in Sources */,
 				8138100418F88A7A008B20B9 /* JSONSyntaxHighlight.m in Sources */,
 				81380FFE18F88A7A008B20B9 /* STTwitterAPI.m in Sources */,
 				8138103518F88D08008B20B9 /* RNViewController.m in Sources */,
@@ -871,7 +881,7 @@
 /* Begin PBXTargetDependency section */
 		81DA57D718CE4E4700A644EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81DA57AC18CE4E4600A644EE /* ruche */;
+			target = 81DA57AC18CE4E4600A644EE /* La Ruche Numérique */;
 			targetProxy = 81DA57D618CE4E4700A644EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -977,10 +987,10 @@
 					"$(PROJECT_DIR)/ruche/Classes/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ruche/ruche-Prefix.pch";
-				INFOPLIST_FILE = "ruche/ruche-Info.plist";
+				GCC_PREFIX_HEADER = "ruche/La Ruche Numérique-Prefix.pch";
+				INFOPLIST_FILE = "ruche/La Ruche Numérique-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "La Ruche Numérique";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -996,10 +1006,10 @@
 					"$(PROJECT_DIR)/ruche/Classes/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ruche/ruche-Prefix.pch";
-				INFOPLIST_FILE = "ruche/ruche-Info.plist";
+				GCC_PREFIX_HEADER = "ruche/La Ruche Numérique-Prefix.pch";
+				INFOPLIST_FILE = "ruche/La Ruche Numérique-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "La Ruche Numérique";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1020,7 +1030,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "rucheTests/rucheTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "La Ruche NumériqueTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1038,7 +1048,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ruche/ruche-Prefix.pch";
 				INFOPLIST_FILE = "rucheTests/rucheTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "La Ruche NumériqueTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1047,7 +1057,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81DA57A818CE4E4600A644EE /* Build configuration list for PBXProject "ruche" */ = {
+		81DA57A818CE4E4600A644EE /* Build configuration list for PBXProject "La Ruche Numérique" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81DA57E018CE4E4700A644EE /* Debug */,
@@ -1056,7 +1066,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81DA57E218CE4E4700A644EE /* Build configuration list for PBXNativeTarget "ruche" */ = {
+		81DA57E218CE4E4700A644EE /* Build configuration list for PBXNativeTarget "La Ruche Numérique" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81DA57E318CE4E4700A644EE /* Debug */,
@@ -1065,7 +1075,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81DA57E518CE4E4700A644EE /* Build configuration list for PBXNativeTarget "rucheTests" */ = {
+		81DA57E518CE4E4700A644EE /* Build configuration list for PBXNativeTarget "La Ruche NumériqueTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81DA57E618CE4E4700A644EE /* Debug */,

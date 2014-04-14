@@ -7,6 +7,7 @@
 //
 
 #import "RNTwitterViewController.h"
+#import "UIScrollView+SpiralPullToRefresh.h"
 #import "RNTwitterCell.h"
 #import "STTwitter.h"
 #import "NSString+HTML.h"
@@ -17,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableViewTwitte;
 @property (strong, nonatomic) NSMutableArray *twitterFeed;
 
+@property (nonatomic, strong) NSTimer *workTimer;
+
 @end
 
 @implementation RNTwitterViewController 
@@ -25,6 +28,23 @@
 {
     [super viewDidLoad];
     
+    [self tweetFeed];
+    
+    __typeof (&*self) __weak weakSelf = self;
+    
+    [self.tableViewTwitte addPullToRefreshWithActionHandler:^ {
+        int64_t delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [weakSelf refreshTriggered];
+        });
+    }];
+    
+    // Three type of waiting animations available now: Random, Linear and Circular
+    self.tableViewTwitte.pullToRefreshController.waitingAnimation = SpiralPullToRefreshWaitAnimationCircular;
+}
+
+- (void)tweetFeed {
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:RN_CONSUMER_KEY consumerSecret:RN_CONSUMER_SECRET];
     
     [twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
@@ -39,6 +59,29 @@
     } errorBlock:^(NSError *error) {
         NSLog(@"%@", error.debugDescription);
     }];
+}
+
+- (void)refreshTriggered {
+    [self statTodoSomething];
+}
+
+- (void)statTodoSomething {
+    
+    [self.workTimer invalidate];
+    
+    self.workTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(onAllworkDoneTimer) userInfo:nil repeats:NO];
+}
+
+- (void)onAllworkDoneTimer {
+    [self.workTimer invalidate];
+    self.workTimer = nil;
+    
+    //[self.twitterFeed addObject: [NSNumber numberWithInt: self.twitterFeed.count]];
+    
+    [self tweetFeed];
+    
+    [self.tableViewTwitte.pullToRefreshController didFinishRefresh];
+    [self.tableViewTwitte reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,5 +134,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
 
 @end
