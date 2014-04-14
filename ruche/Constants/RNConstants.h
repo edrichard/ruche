@@ -12,9 +12,10 @@
 #define RN_VERSION_IOS          [[[UIDevice currentDevice] systemVersion] floatValue]
 
 //--- WS
-#define RN_HOST                             @"www.google.com"
-#define RN_GOOGLE_AGENDA_EVENT_REALEASE     @"http://www.google.com/calendar/feeds/ruchenumerique%40gmail.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending"
-#define RN_FEED_NEWS_REALEASE               @"http://www.laruchenumerique.com/feed/"
+#define RN_HOST                                 @"www.google.com"
+#define RN_GOOGLE_AGENDA_EVENT_REALEASE_XML     @"http://www.google.com/calendar/feeds/ruchenumerique%40gmail.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending"
+#define RN_GOOGLE_AGENDA_EVENT_REALEASE_JSON    @"http://www.google.com/calendar/feeds/ruchenumerique%40gmail.com/public/full?alt=json-in-script&singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending"
+#define RN_FEED_NEWS_REALEASE                   @"http://www.laruchenumerique.com/feed/"
 
 //--- Table Events
 #define RN_HEIGHT_CELL_EVENT 85
