@@ -21,9 +21,14 @@
 #define RN_HEIGHT_CELL_EVENT 85
 
 //--- Id Twitter
-#define RN_SCREEN_NAME          @"edrichardfr"
-#define RN_CONSUMER_KEY         @"Wb6KsgKpNIABpBFF59tspQ"
-#define RN_CONSUMER_SECRET      @"Nk8C8rEjNIRJO8ME524vFFzCC77NQD175LCP2q0lw"
+#define RN_SCREEN_NAME                      @"edrichardfr"
+#define RN_OAUTH_CONSUMER_KEY               @"Wb6KsgKpNIABpBFF59tspQ"
+#define RN_OAUTH_CONSUMER_SECRET_KEY        @"Nk8C8rEjNIRJO8ME524vFFzCC77NQD175LCP2q0lw"
+#define RN_OUATH_TOKEN                      @"132995681-e5jFNnnIUyjy6xRcUdgpcCpajGWPJlcYPpB2EIFR"
+#define RN_OUATH_TOKEN_SECRET               @"dD3JsKkq9R0i7cEyPhTmU0q0vO4eO1WQzEOuVWsdOJBnG"
+#define RN_OUATH_TWITTER_USER               @"edrichardfr"
+#define RN_OUATH_TWITTER_PASSWORD           @"alonso72!"
+#define RN_CONSUMER_NAME                    @"edrichardfrTimeline"
 
 //--- Table Twitter
 #define RN_HEIGHT_CELL_TWITTER 100
