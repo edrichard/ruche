@@ -12,10 +12,13 @@
 #import "RNTwitterCell.h"
 #import "RNLoader.h"
 
+
 @interface RNTwitterViewController ()
 
 @property (nonatomic, strong) NSMutableArray *jsonFeedTweeter;
 @property (nonatomic, strong) IBOutlet UITableView *tableViewTwitte;
+
+@property (nonatomic, strong) RNLoader *loader;
 
 @property (nonatomic, strong) NSTimer *workTimer;
 
@@ -44,6 +47,11 @@
 
 - (void)tweetFeed
 {
+    self.loader = [[RNLoader alloc] initWithFrame:CGRectMake(floorf((self.view.frame.size.width - RN_ACTIVITY_INDICATOR) / 2), floorf((self.view.frame.size.height - RN_ACTIVITY_INDICATOR) / 2), RN_ACTIVITY_INDICATOR, RN_ACTIVITY_INDICATOR)];
+    [self.view addSubview:self.loader];
+    [self.loader compile];
+    [self.loader start];
+    
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:RN_CONSUMER_NAME
                                                               consumerKey:RN_OAUTH_CONSUMER_KEY
                                                            consumerSecret:RN_OAUTH_CONSUMER_SECRET_KEY
@@ -57,12 +65,15 @@
                            successBlock:^(NSArray *statuses) {
                                self.jsonFeedTweeter = [NSMutableArray arrayWithArray:statuses];
                                [self.tableViewTwitte reloadData];
+                               [self.loader stop];
                            } errorBlock:^(NSError *error) {
+                               [self.loader stop];
                                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Erreur :" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                                [alertView show];
                            }];
         
     } errorBlock:^(NSError *error) {
+        [self.loader stop];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Erreur" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alertView show];
     }];

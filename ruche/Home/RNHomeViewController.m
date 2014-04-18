@@ -8,7 +8,6 @@
 
 #import "RNHomeViewController.h"
 #import "RNMapKitViewController.h"
-#import "RNLoader.h"
 
 @interface RNHomeViewController ()
 
@@ -16,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btNews;
 @property (weak, nonatomic) IBOutlet UIButton *btRuche;
 @property (weak, nonatomic) IBOutlet UIButton *btTeam;
-
-@property (nonatomic, strong) RNLoader *loaderView;
 
 @end
 
@@ -38,9 +35,6 @@
     [super viewDidLoad];
     
     [self checkInternet];
-    
-    self.loaderView = [[RNLoader alloc] initWithFrame:CGRectMake(floorf((self.view.frame.size.width - RN_ACTIVITY_INDICATOR) / 2), floorf((self.view.frame.size.height - RN_ACTIVITY_INDICATOR) / 2), RN_ACTIVITY_INDICATOR, RN_ACTIVITY_INDICATOR)];
-    [self.view addSubview:self.loaderView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,23 +92,6 @@
 {
     if(buttonIndex == 0)
         exit(0);
-}
-
-#pragma mark - UI Loader
-
-- (void)displayLoader
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.loaderView compile];
-        [self.loaderView start];
-    });
-}
-
-- (void)hideLoader
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.loaderView stop];
-    });
 }
 
 @end

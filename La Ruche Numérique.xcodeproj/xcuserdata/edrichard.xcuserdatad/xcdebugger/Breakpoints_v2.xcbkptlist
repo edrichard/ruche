@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ruche/Classes/Loader/RNLoader.m"
-            timestampString = "419442359.863876"
+            timestampString = "419527454.173305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-compile"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,59 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ruche/Classes/Loader/RNLoader.m"
-            timestampString = "419442359.863876"
+            timestampString = "419527454.173305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-start"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ruche/Twitter/RNTwitterViewController.m"
-            timestampString = "419503164.697515"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-tweetFeed"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[RNTwitterViewController tweetFeed]_block_invoke62"
-                  moduleName = "La Ruche Nume&#x301;rique"
-                  urlString = "file:///Users/edrichard/IIA/iOS/ruche/ruche/Twitter/RNTwitterViewController.m"
-                  timestampString = "419515052.266469"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "263">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[RNTwitterViewController tweetFeed]_block_invoke62"
-                  moduleName = "La Ruche Nume&#x301;rique"
-                  urlString = "file:///Users/edrichard/IIA/iOS/ruche/ruche/Twitter/RNTwitterViewController.m"
-                  timestampString = "419515052.267202"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "290">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
