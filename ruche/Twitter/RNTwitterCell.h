@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *profileImg;
 @property (strong, nonatomic) IBOutlet UILabel *screenNameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *twitteLabel;
-
+@property (strong, nonatomic) IBOutlet UILabel *twetterFeed;
 
 @end

@@ -9,6 +9,7 @@
 #import "RNTwitterViewController.h"
 #import "STTwitter.h"
 #import "RNTwitterCell.h"
+#import "RNLoader.h"
 
 @interface RNTwitterViewController ()
 
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     [self tweetFeed];
 }
@@ -67,13 +69,12 @@
     return RN_HEIGHT_CELL_TWITTER;
 }
 
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"twitterCell";
     
     RNTwitterCell *cell = (RNTwitterCell *) [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    if(cell == nil) {
+    if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RNTwitterCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
@@ -89,10 +90,18 @@
     NSData *profileImgData = [NSData dataWithContentsOfURL:imageUrl];
     cell.profileImg.image = [UIImage imageWithData:profileImgData];
     
-    cell.twitteLabel.text = text;
-    cell.screenNameLabel.text = [NSString stringWithFormat:@"%@ @%@", name, screenName];;
+    cell.screenNameLabel.text = [NSString stringWithFormat:@"%@ - @%@", name, screenName];
+    cell.twetterFeed.text = text;
+    cell.twetterFeed.numberOfLines = 4;
+    [cell.twetterFeed sizeToFit];
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Utility methods
 
 @end

@@ -29,7 +29,6 @@
 		8138101618F88B4C008B20B9 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100818F88B4C008B20B9 /* email.png */; };
 		8138101718F88B4C008B20B9 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100918F88B4C008B20B9 /* facebook.png */; };
 		8138101818F88B4C008B20B9 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100A18F88B4C008B20B9 /* forward.png */; };
-		8138101918F88B4C008B20B9 /* geography.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100B18F88B4C008B20B9 /* geography.png */; };
 		8138101A18F88B4C008B20B9 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100C18F88B4C008B20B9 /* home.png */; };
 		8138101B18F88B4C008B20B9 /* info-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100D18F88B4C008B20B9 /* info-50.png */; };
 		8138101C18F88B4C008B20B9 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138100E18F88B4C008B20B9 /* info.png */; };
@@ -64,6 +63,10 @@
 		817C779B18D44EF800FAC7ED /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817C779A18D44EF800FAC7ED /* Social.framework */; };
 		817C77A118D4765500FAC7ED /* RNEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 817C77A018D4765500FAC7ED /* RNEventCell.m */; };
 		817C77A318D4767500FAC7ED /* RNEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817C77A218D4767500FAC7ED /* RNEventCell.xib */; };
+		81B1870D18FE8024002A6B8E /* La Ruche Numérique-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B1870C18FE8024002A6B8E /* La Ruche Numérique-Info.plist */; };
+		81B1872519001E71002A6B8E /* RNLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B1872419001E71002A6B8E /* RNLoader.m */; };
+		81B1872819002058002A6B8E /* loader@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B1872619002058002A6B8E /* loader@2x~iphone.png */; };
+		81B1872919002058002A6B8E /* loader~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B1872719002058002A6B8E /* loader~iphone.png */; };
 		81DA57B118CE4E4600A644EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57B018CE4E4600A644EE /* Foundation.framework */; };
 		81DA57B318CE4E4600A644EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57B218CE4E4600A644EE /* CoreGraphics.framework */; };
 		81DA57B518CE4E4600A644EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA57B418CE4E4600A644EE /* UIKit.framework */; };
@@ -194,11 +197,15 @@
 		817C779F18D4765500FAC7ED /* RNEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNEventCell.h; path = /Users/edrichard/IIA/iOS/ruche/ruche/Events/RNEventCell.h; sourceTree = "<absolute>"; };
 		817C77A018D4765500FAC7ED /* RNEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNEventCell.m; path = /Users/edrichard/IIA/iOS/ruche/ruche/Events/RNEventCell.m; sourceTree = "<absolute>"; };
 		817C77A218D4767500FAC7ED /* RNEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNEventCell.xib; path = /Users/edrichard/IIA/iOS/ruche/ruche/Events/RNEventCell.xib; sourceTree = "<absolute>"; };
+		81B1870C18FE8024002A6B8E /* La Ruche Numérique-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "La Ruche Numérique-Info.plist"; sourceTree = "<group>"; };
+		81B1872319001E71002A6B8E /* RNLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLoader.h; sourceTree = "<group>"; };
+		81B1872419001E71002A6B8E /* RNLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLoader.m; sourceTree = "<group>"; };
+		81B1872619002058002A6B8E /* loader@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loader@2x~iphone.png"; sourceTree = "<group>"; };
+		81B1872719002058002A6B8E /* loader~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loader~iphone.png"; sourceTree = "<group>"; };
 		81DA57AD18CE4E4600A644EE /* La Ruche Numérique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "La Ruche Numérique.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DA57B018CE4E4600A644EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81DA57B218CE4E4600A644EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		81DA57B418CE4E4600A644EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		81DA57B818CE4E4600A644EE /* La Ruche Numérique-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "La Ruche Numérique-Info.plist"; sourceTree = "<group>"; };
 		81DA57BA18CE4E4600A644EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81DA57BC18CE4E4600A644EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81DA57BE18CE4E4600A644EE /* La Ruche Numérique-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "La Ruche Numérique-Prefix.pch"; sourceTree = "<group>"; };
@@ -313,6 +320,8 @@
 		8138100618F88A9D008B20B9 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
+				81B1872319001E71002A6B8E /* RNLoader.h */,
+				81B1872419001E71002A6B8E /* RNLoader.m */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -606,7 +615,7 @@
 		81DA57B718CE4E4600A644EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				81DA57B818CE4E4600A644EE /* La Ruche Numérique-Info.plist */,
+				81B1870C18FE8024002A6B8E /* La Ruche Numérique-Info.plist */,
 				81DA57B918CE4E4600A644EE /* InfoPlist.strings */,
 				81DA57BC18CE4E4600A644EE /* main.m */,
 				81DA57BE18CE4E4600A644EE /* La Ruche Numérique-Prefix.pch */,
@@ -649,6 +658,8 @@
 				8138101218F88B4C008B20B9 /* rucheTitle.png */,
 				8138101318F88B4C008B20B9 /* rucheTitle@2x.png */,
 				8138101418F88B4C008B20B9 /* twitter.png */,
+				81B1872619002058002A6B8E /* loader@2x~iphone.png */,
+				81B1872719002058002A6B8E /* loader~iphone.png */,
 			);
 			name = ress;
 			path = /Users/edrichard/IIA/iOS/ruche/ruche/ress;
@@ -797,16 +808,18 @@
 				817C77A318D4767500FAC7ED /* RNEventCell.xib in Resources */,
 				81DA57CC18CE4E4700A644EE /* Images.xcassets in Resources */,
 				81380FDD18F88413008B20B9 /* RNTwitterCell.xib in Resources */,
-				8138101918F88B4C008B20B9 /* geography.png in Resources */,
 				8138101C18F88B4C008B20B9 /* info.png in Resources */,
+				81B1872819002058002A6B8E /* loader@2x~iphone.png in Resources */,
 				8145C47918F8755D00CA1091 /* LICENSE in Resources */,
 				8138101D18F88B4C008B20B9 /* logo.png in Resources */,
 				8138102018F88B4C008B20B9 /* rucheTitle.png in Resources */,
 				8138101A18F88B4C008B20B9 /* home.png in Resources */,
+				81B1872919002058002A6B8E /* loader~iphone.png in Resources */,
 				8138103B18F88D70008B20B9 /* RNNewsCell.xib in Resources */,
 				8143330A18D24F3C005C6E29 /* Main.storyboard in Resources */,
 				8138101518F88B4C008B20B9 /* back.png in Resources */,
 				8138101818F88B4C008B20B9 /* forward.png in Resources */,
+				81B1870D18FE8024002A6B8E /* La Ruche Numérique-Info.plist in Resources */,
 				8138101718F88B4C008B20B9 /* facebook.png in Resources */,
 				8138101E18F88B4C008B20B9 /* logo@2x.png in Resources */,
 				8138101618F88B4C008B20B9 /* email.png in Resources */,
@@ -857,6 +870,7 @@
 				8145C48C18F8765C00CA1091 /* UILabel+Boldify.m in Sources */,
 				8138100518F88A7A008B20B9 /* STHTTPRequest.m in Sources */,
 				8138105918F89083008B20B9 /* Reachability.m in Sources */,
+				81B1872519001E71002A6B8E /* RNLoader.m in Sources */,
 				8138104318F88E22008B20B9 /* RNTeamViewController.m in Sources */,
 				8138103218F88D08008B20B9 /* RNDisplayMap.m in Sources */,
 				81F748CA18FC1E72002C1963 /* UIScrollView+SpiralPullToRefresh.m in Sources */,
