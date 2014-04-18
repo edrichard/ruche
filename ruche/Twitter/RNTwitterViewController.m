@@ -117,16 +117,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - Utility methods
+#pragma mark - Reload data Tweet
 
 - (void)refreshTriggered {
     [self statTodoSomething];
 }
 
 - (void)statTodoSomething {
-    
     [self.workTimer invalidate];
-    
     self.workTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(onAllworkDoneTimer) userInfo:nil repeats:NO];
 }
 

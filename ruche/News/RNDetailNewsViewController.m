@@ -40,6 +40,7 @@
     [self.descriptionLabel layoutIfNeeded];
     NSString *description = [self stringByStrippingHTML:self.stringDescription];
     self.descriptionLabel.text = [description stringByDecodingHTMLEntities];
+    self.descriptionLabel.textAlignment = NSTextAlignmentJustified;
     
     [self.buttonMore addTarget:self action:@selector(pushButton:) forControlEvents:UIControlEventTouchUpInside];
 }
