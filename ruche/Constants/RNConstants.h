@@ -10,6 +10,7 @@
 #define RN_SCREEN_WIDTH         [[UIScreen mainScreen] bounds].size.width
 #define RN_SCREEN_HEIGHT        [[UIScreen mainScreen] bounds].size.height
 #define RN_VERSION_IOS          [[[UIDevice currentDevice] systemVersion] floatValue]
+#define RN_ACTIVITY_INDICATOR   36
 
 //--- WS
 #define RN_HOST                                 @"www.google.com"
@@ -35,3 +36,7 @@
 
 //--- Color
 #define RN_COLOR_NEWS           colorWithRed:(119/255.f) green:(38/255.f) blue:(255/255.f) alpha:1
+
+//--- Notification constants
+#define START_LOADER_NOTIFICATION       @"startLoaderNotification"
+#define STOP_LOADER_NOTIFICATION        @"stopLoaderNotification"
