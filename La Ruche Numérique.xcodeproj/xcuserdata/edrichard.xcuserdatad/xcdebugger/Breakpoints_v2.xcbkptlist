@@ -90,13 +90,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ruche/Twitter/RNTwitterViewController.m"
-            timestampString = "419501200.915936"
+            timestampString = "419503164.697515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-tweetFeed"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[RNTwitterViewController tweetFeed]_block_invoke62"
+                  moduleName = "La Ruche Nume&#x301;rique"
+                  urlString = "file:///Users/edrichard/IIA/iOS/ruche/ruche/Twitter/RNTwitterViewController.m"
+                  timestampString = "419503165.246041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "263">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[RNTwitterViewController tweetFeed]_block_invoke62"
+                  moduleName = "La Ruche Nume&#x301;rique"
+                  urlString = "file:///Users/edrichard/IIA/iOS/ruche/ruche/Twitter/RNTwitterViewController.m"
+                  timestampString = "419503165.246357"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "290">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -7,6 +7,7 @@
 //
 
 #import "RNTwitterViewController.h"
+#import "UIScrollView+SpiralPullToRefresh.h"
 #import "STTwitter.h"
 #import "RNTwitterCell.h"
 #import "RNLoader.h"
@@ -16,15 +17,29 @@
 @property (nonatomic, strong) NSMutableArray *jsonFeedTweeter;
 @property (nonatomic, strong) IBOutlet UITableView *tableViewTwitte;
 
+@property (nonatomic, strong) NSTimer *workTimer;
+
 @end
 
 @implementation RNTwitterViewController 
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     [self tweetFeed];
+    
+    __typeof (&*self) __weak weakSelf = self;
+    
+    [self.tableViewTwitte addPullToRefreshWithActionHandler:^ {
+        int64_t delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [weakSelf refreshTriggered];
+        });
+    }];
+    
+    // Three type of waiting animations available now: Random, Linear and Circular
+    self.tableViewTwitte.pullToRefreshController.waitingAnimation = SpiralPullToRefreshWaitAnimationCircular;
 }
 
 - (void)tweetFeed
@@ -103,5 +118,26 @@
 }
 
 #pragma mark - Utility methods
+
+- (void)refreshTriggered {
+    [self statTodoSomething];
+}
+
+- (void)statTodoSomething {
+    
+    [self.workTimer invalidate];
+    
+    self.workTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(onAllworkDoneTimer) userInfo:nil repeats:NO];
+}
+
+- (void)onAllworkDoneTimer {
+    [self.workTimer invalidate];
+    self.workTimer = nil;
+    
+    [self tweetFeed];
+    
+    [self.tableViewTwitte.pullToRefreshController didFinishRefresh];
+    [self.tableViewTwitte reloadData];
+}
 
 @end
