@@ -14,14 +14,25 @@
 @property (nonatomic, strong) UIImageView *loaderImageView;
 @property (nonatomic, strong) CABasicAnimation *animation;
 
+@property (nonatomic, strong) UIView *overlay;
+
 @end
 
 @implementation RNLoader
 
 - (void) compile {
-    self.loaderImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 36.f, 36.f)];
+    
+    self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 55.f, 55.f)];
+    self.overlay.backgroundColor = [UIColor blackColor];
+    self.overlay.alpha = 0.2f;
+    self.overlay.layer.cornerRadius = 5;
+    
+    [self addSubview:self.overlay];
+    
+    self.loaderImageView = [[UIImageView alloc] initWithFrame:CGRectMake((20.f/2), (20.f/2), 36.f, 36.f)];
     self.loaderImage = [UIImage imageNamed:@"loader@2x~iphone.png"];
     self.loaderImageView.image = self.loaderImage;
+    
     self.alpha = 0;
     
     [self addSubview:self.loaderImageView];
