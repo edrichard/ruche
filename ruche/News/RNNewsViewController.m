@@ -91,13 +91,16 @@
         cell = [nib objectAtIndex:0];
     }
     
-    [cell.titreNews sizeToFit];
+    
     cell.titreNews.numberOfLines = 0;
-    [cell.titreNews layoutIfNeeded];
+    [cell.titreNews sizeToFit];
+    //[cell.titreNews layoutIfNeeded];
+    
     cell.titreNews.textColor = [UIColor RN_COLOR_NEWS];
     cell.titreNews .text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
     
-    cell.dateNews.text = [self formatDateString:[[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"]];
+    cell.dateNews.alpha = 0;
+    //cell.dateNews.text = [self formatDateString:[[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"]];
     
     cell.logoNext.image = [UIImage imageNamed:@"forward.png"];
     
@@ -124,7 +127,7 @@
     NSString *dateRSS = date;
     NSDate *_date = [self rssToDate:dateRSS];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"'Publié le 'dd/MM/yyyy 'à' HH'h'mm"];
+    [df setDateFormat:@"'Publié le 'dd/MM/yyyy' '"];
     NSString *formattedDateString = [df stringFromDate:_date];
     
     return formattedDateString;
