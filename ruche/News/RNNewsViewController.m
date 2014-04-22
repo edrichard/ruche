@@ -76,13 +76,28 @@
     return feeds.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/*- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return RN_HEIGHT_CELL_EVENT;
-}
+}*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*static NSString *simpleTableIdentifier = @"cellNews";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.detailTextLabel.text = [self formatDateString:[[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"]];
+    
+    return cell;*/
+    
+    
+    
     static NSString *simpleTableIdentifier = @"NewsCell";
     
     RNNewsCell *cell = (RNNewsCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -91,18 +106,8 @@
         cell = [nib objectAtIndex:0];
     }
     
-    
-    cell.titreNews.numberOfLines = 0;
-    [cell.titreNews sizeToFit];
-    //[cell.titreNews layoutIfNeeded];
-    
-    cell.titreNews.textColor = [UIColor RN_COLOR_NEWS];
-    cell.titreNews .text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
-    
-    cell.dateNews.alpha = 0;
-    //cell.dateNews.text = [self formatDateString:[[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"]];
-    
-    cell.logoNext.image = [UIImage imageNamed:@"forward.png"];
+    cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.detailTextLabel.text = [self formatDateString:[[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"]];
     
     return cell;
 }

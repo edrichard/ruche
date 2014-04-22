@@ -50,6 +50,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)pushButton:(id)sender
 {
     NSString* stringURL = [NSString stringWithFormat:@"%@", self.stringUrl];
@@ -62,16 +63,13 @@
 {
     NSMutableString *outString;
     
-    if (inputString)
-    {
+    if (inputString) {
         outString = [[NSMutableString alloc] initWithString:inputString];
         
-        if ([inputString length] > 0)
-        {
+        if ([inputString length] > 0) {
             NSRange r;
             
-            while ((r = [outString rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
-            {
+            while ((r = [outString rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound) {
                 [outString deleteCharactersInRange:r];
             }      
         }
