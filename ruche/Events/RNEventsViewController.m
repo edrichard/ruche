@@ -11,10 +11,14 @@
 
 @interface RNEventsViewController () {
     NSXMLParser *parser;
-    NSMutableArray *feeds;
-    NSMutableDictionary *item;
+    NSMutableArray *event;
+    NSMutableDictionary *entry;
     NSMutableString *title;
-    NSMutableString *link;
+    NSMutableDictionary *when;
+    NSMutableArray *time;
+    NSMutableString *endTime;
+    NSMutableString *startTime;
+    NSMutableString *content;
     NSString *element;
 }
 
@@ -35,8 +39,8 @@
 {
     [super viewDidLoad];
 
-    feeds = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:RN_FEED_NEWS_REALEASE];
+    event = [[NSMutableArray alloc] init];
+    NSURL *url = [NSURL URLWithString:RN_GOOGLE_AGENDA_EVENT_REALEASE_XML];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     
     [parser setDelegate:self];
@@ -69,13 +73,13 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return feeds.count;
+    return event.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/*- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return RN_HEIGHT_CELL_EVENT;
-}
+}*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -90,6 +94,8 @@
     cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
     return cell;*/
     
+    NSLog(@"event :: %@", event);
+    
     static NSString *simpleTableIdentifier = @"EventCell";
     
     RNEventCell *cell = (RNEventCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -99,8 +105,8 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.titreEvent.text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.fleche.image = [UIImage imageNamed:@"forward.png"];
+    cell.textLabel.text = [[event objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.detailTextLabel.text = [[event objectAtIndex:indexPath.row] objectForKey:@"startTime"];
     
     return cell;
 }
@@ -162,36 +168,36 @@
     
     element = elementName;
     
-    if ([element isEqualToString:@"item"]) {
-        
-        item    = [[NSMutableDictionary alloc] init];
-        title   = [[NSMutableString alloc] init];
-        link    = [[NSMutableString alloc] init];
-        
+    if ([element isEqualToString:@"entry"]) {
+        entry = [[NSMutableDictionary alloc] init];
+        title = [[NSMutableString alloc] init];
+        content = [[NSMutableString alloc] init];
+    } else if ([element isEqualToString:@"gd:when"]) {
+        entry = [[NSMutableDictionary alloc] initWithDictionary:attributeDict];
+        startTime = [[NSMutableString alloc] init];
+        endTime = [[NSMutableString alloc] init];
     }
-    
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
-    if ([elementName isEqualToString:@"item"]) {
-        
-        [item setObject:title forKey:@"title"];
-        [item setObject:link forKey:@"link"];
-        
-        [feeds addObject:[item copy]];
-        
+    if ([elementName isEqualToString:@"entry"]) {
+        [entry setObject:title forKey:@"title"];
+        [entry setObject:content forKey:@"content"];
+    } else if ([elementName isEqualToString:@"gd:when"]) {
+        [event addObject:entry];
     }
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    
     if ([element isEqualToString:@"title"]) {
         [title appendString:string];
-    } else if ([element isEqualToString:@"link"]) {
-        [link appendString:string];
+    } else if ([element isEqualToString:@"content"]) {
+        [content appendString:string];
+    } else if ([element isEqualToString:@"gd:when"]) {
+        [endTime appendString:string];
+        [startTime appendString:string];
     }
-    
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {

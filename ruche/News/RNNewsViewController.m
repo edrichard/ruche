@@ -83,21 +83,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*static NSString *simpleTableIdentifier = @"cellNews";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
-    
-    cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.detailTextLabel.text = [self formatDateString:[[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"]];
-    
-    return cell;*/
-    
-    
-    
     static NSString *simpleTableIdentifier = @"NewsCell";
     
     RNNewsCell *cell = (RNNewsCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
