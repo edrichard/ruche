@@ -8,6 +8,7 @@
 
 #import "RNTwitterViewController.h"
 #import "UIScrollView+SpiralPullToRefresh.h"
+#import "NSString+HTML.h"
 #import "STTwitter.h"
 #import "RNTwitterCell.h"
 #import "RNLoader.h"
@@ -29,6 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableViewTwitte.frame = CGRectMake(0,40,320,480);
+    
     [self tweetFeed];
     
     __typeof (&*self) __weak weakSelf = self;
@@ -117,7 +121,7 @@
     cell.profileImg.image = [UIImage imageWithData:profileImgData];
     
     cell.screenNameLabel.text = [NSString stringWithFormat:@"%@ - @%@", name, screenName];
-    cell.twetterFeed.text = text;
+    cell.twetterFeed.text = [text stringByDecodingHTMLEntities];
     cell.twetterFeed.numberOfLines = 4;
     [cell.twetterFeed sizeToFit];
     
