@@ -102,6 +102,9 @@
     [self performSegueWithIdentifier:@"showDetailNews" sender:self];
 }
 
+
+# pragma mark - Convert RSS date format in national date format
+
 - (NSDate *)rssToDate:(NSString *)strDate
 {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];

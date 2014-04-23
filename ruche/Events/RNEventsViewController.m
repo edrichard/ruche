@@ -237,11 +237,12 @@
     [f setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZ"];
     NSDate *d = [f dateFromString:s];
     
+    [f setLocale:locale];
     [f setTimeZone:timezone];
     [f setDateStyle:NSDateFormatterFullStyle];
     [f setTimeStyle:NSDateFormatterShortStyle];
     NSString *date = [f stringFromDate:d];
-    NSString *output = [NSString stringWithFormat:@"%@", date];
+    NSString *output = [NSString stringWithFormat:@"Le %@", date];
     
     return output;
 }

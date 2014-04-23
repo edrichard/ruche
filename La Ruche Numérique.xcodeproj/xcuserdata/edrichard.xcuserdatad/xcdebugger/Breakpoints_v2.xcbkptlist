@@ -89,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ruche/Events/RNEventsViewController.m"
-            timestampString = "419952363.050159"
+            filePath = "ruche/News/RNNewsViewController.m"
+            timestampString = "419956973.927445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "-dateFromISO8601String:andTimeZone:andLocale:"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-formatDateString:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
