@@ -14,11 +14,10 @@
     NSMutableArray *event;
     NSMutableDictionary *entry;
     NSMutableString *title;
-    NSMutableDictionary *when;
-    NSMutableArray *time;
     NSMutableString *endTime;
     NSMutableString *startTime;
     NSMutableString *content;
+    NSMutableString *valueString;
     NSString *element;
 }
 
@@ -94,7 +93,7 @@
     cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
     return cell;*/
     
-    NSLog(@"event :: %@", event);
+    //NSLog(@"event :: %@", event);
     
     static NSString *simpleTableIdentifier = @"EventCell";
     
@@ -106,7 +105,7 @@
     }
     
     cell.textLabel.text = [[event objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.detailTextLabel.text = [[event objectAtIndex:indexPath.row] objectForKey:@"startTime"];
+    cell.detailTextLabel.text = [self dateFromISO8601String:[[event objectAtIndex:indexPath.row] objectForKey:@"startTime"] andTimeZone:RN_TIMEZONE andLocale:RN_LOLALE];
     
     return cell;
 }
@@ -176,7 +175,10 @@
         entry = [[NSMutableDictionary alloc] initWithDictionary:attributeDict];
         startTime = [[NSMutableString alloc] init];
         endTime = [[NSMutableString alloc] init];
-    }
+    } /*else if ([element isEqualToString:@"gd:where"]) {
+        entry = [[NSMutableDictionary alloc] initWithDictionary:attributeDict];
+        valueString = [[NSMutableString alloc] init];
+    }*/
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
@@ -184,9 +186,12 @@
     if ([elementName isEqualToString:@"entry"]) {
         [entry setObject:title forKey:@"title"];
         [entry setObject:content forKey:@"content"];
+        //[event addObject:entry];
     } else if ([elementName isEqualToString:@"gd:when"]) {
         [event addObject:entry];
-    }
+    } /*else if ([elementName isEqualToString:@"gd:where"]) {
+        [event addObject:entry];
+    }*/
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
@@ -197,13 +202,13 @@
     } else if ([element isEqualToString:@"gd:when"]) {
         [endTime appendString:string];
         [startTime appendString:string];
-    }
+    } /*else if ([element isEqualToString:@"gd:where"]) {
+        [valueString appendString:string];
+    }*/
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    
     [self.tableView reloadData];
-    
 }
 
 /*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -223,5 +228,22 @@
     [self dismissViewControllerAnimated: YES completion: NULL];
 }
 
+# pragma mark - Convert ISO 8601 date format in national date format
+
+- (NSString *)dateFromISO8601String:(NSString *)dateString andTimeZone:(NSTimeZone *)timezone andLocale:(NSLocale *)locale
+{
+    NSString *s = dateString;
+    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+    [f setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZ"];
+    NSDate *d = [f dateFromString:s];
+    
+    [f setTimeZone:timezone];
+    [f setDateStyle:NSDateFormatterFullStyle];
+    [f setTimeStyle:NSDateFormatterShortStyle];
+    NSString *date = [f stringFromDate:d];
+    NSString *output = [NSString stringWithFormat:@"%@", date];
+    
+    return output;
+}
 
 @end

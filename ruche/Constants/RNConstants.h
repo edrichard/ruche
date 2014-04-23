@@ -12,6 +12,10 @@
 #define RN_VERSION_IOS          [[[UIDevice currentDevice] systemVersion] floatValue]
 #define RN_ACTIVITY_INDICATOR   36
 
+
+#define RN_TIMEZONE             [NSTimeZone defaultTimeZone]
+#define RN_LOLALE               [NSLocale currentLocale]
+
 //--- WS
 #define RN_HOST                                 @"www.google.com"
 #define RN_GOOGLE_AGENDA_EVENT_REALEASE_XML     @"http://www.google.com/calendar/feeds/ruchenumerique%40gmail.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending"
